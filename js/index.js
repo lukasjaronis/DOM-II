@@ -1,5 +1,13 @@
 // Your code goes here
 
+// mouseover
+// scroll
+// mouseover
+// mouseout
+// dblclick
+// click
+// resize
+// keypress
 
 // added an anchor tag to nav
 let nav = document.querySelector("nav");
@@ -71,6 +79,8 @@ nightShift.addEventListener("mouseout", () => {
  // GO! 
 
  let go = document.querySelector("body section .text-content:first-child h2");
+ 
+
  go.addEventListener('dblclick', () => {
      go.style.fontWeight = "900";
      go.style.transform = "rotate(360deg)";
@@ -79,9 +89,33 @@ nightShift.addEventListener("mouseout", () => {
      window.addEventListener('scroll', () => {
          go.style.transform = "rotate(180deg)";
          go.style.transition = "all 0.3s";
-         
      })
  })
 
 
+let img = document.querySelector(".img-fluid");
+img.addEventListener('click', () => {
 
+img.src = "https://images.unsplash.com/photo-1572371402638-c654219dd0f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+
+})
+
+let images = document.querySelector('img');
+console.log(images);
+window.addEventListener("resize", () => {
+    images.src = "https://images.unsplash.com/photo-1541364983171-a8ba01e95cfc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80!"
+})
+
+
+// keypress
+document.addEventListener('keypress', logkey)
+
+function logkey(g) {
+    window.location.replace("http://www.google.com");
+}
+
+window.onload = () => {
+
+nav.style.background = "red"; 
+
+}
