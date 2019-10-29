@@ -8,6 +8,7 @@
 // click
 // resize
 // keypress
+// onload
 
 // added an anchor tag to nav
 let nav = document.querySelector("nav");
@@ -101,7 +102,6 @@ img.src = "https://images.unsplash.com/photo-1572371402638-c654219dd0f8?ixlib=rb
 })
 
 let images = document.querySelector('img');
-console.log(images);
 window.addEventListener("resize", () => {
     images.src = "https://images.unsplash.com/photo-1541364983171-a8ba01e95cfc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80!"
 })
@@ -119,3 +119,8 @@ window.onload = () => {
 nav.style.background = "red"; 
 
 }
+
+let highlight = document.querySelector(".container p");
+highlight.addEventListener('wheel', () => {
+    highlight.style.background = "yellow";
+})
