@@ -9,6 +9,7 @@
 // resize
 // keypress
 // onload
+// wheel
 
 // added an anchor tag to nav
 let nav = document.querySelector("nav");
@@ -19,6 +20,35 @@ nightShift.prepend(nightShiftText);
 nightShift.style.color = "red";
 nightShift.style.fontWeight = "900";
 nav.appendChild(nightShift);
+
+// random
+
+let navItems = document.querySelectorAll("nav a");
+
+function random() {
+    for (i = 0; i < navItems.length; i++) {
+        let r = Math.random() + 2;
+        navItems[i].style.transform = `scale(${r})`;
+    }
+}
+
+window.addEventListener("scroll", random);
+
+navItems[0].addEventListener('click', function(e){
+    e.preventDefault();
+})
+navItems[1].addEventListener('click', function(e){
+    e.preventDefault();
+})
+navItems[2].addEventListener('click', function(e){
+    e.preventDefault();
+})
+navItems[3].addEventListener('click', function(e){
+    e.preventDefault();
+})
+navItems[4].addEventListener('click', function(e){
+    e.preventDefault();
+})
 
 // night shift
 
@@ -39,10 +69,8 @@ let lightMode = () => {
 
  let trippyMode = () => {
     let body = document.querySelector("body, home");
-    let p = document.querySelector("body, home p");
     let h2 = document.querySelector("body, home h2");
     body.style.background = "#04BF8A";
-    p.style.color = "#745DA6";
     h2.style.color = "#F277A4";
  }
 
@@ -116,7 +144,7 @@ function logkey(g) {
 
 window.onload = () => {
 
-nav.style.background = "red"; 
+nav.style.background = "lightgreen"; 
 
 }
 
