@@ -71,10 +71,17 @@ nightShift.addEventListener("mouseout", () => {
  // GO! 
 
  let go = document.querySelector("body section .text-content:first-child h2");
- // console.log(go);
- go.addEventListener('click', () => {
+ go.addEventListener('dblclick', () => {
      go.style.fontWeight = "900";
      go.style.transform = "rotate(360deg)";
      go.style.transition = "all 0.3s";
      go.style.color = "green";
+     window.addEventListener('scroll', () => {
+         go.style.transform = "rotate(180deg)";
+         go.style.transition = "all 0.3s";
+         
+     })
  })
+
+
+
